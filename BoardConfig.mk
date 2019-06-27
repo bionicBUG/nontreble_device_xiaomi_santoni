@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+TARGET_BOOT_ANIMATION_RES := 720
 DEVICE_PATH := device/xiaomi/santoni
 
 # inherit from common msm8937-common
