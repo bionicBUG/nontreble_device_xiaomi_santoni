@@ -19,7 +19,7 @@ DEVICE_PATH := device/xiaomi/santoni
 
 # inherit from common msm8937-common
 -include device/xiaomi/msm8937-common/BoardConfigCommon.mk
-
+TARGET_QCOM_[AUDIO/DISPLAY/MEDIA]_VARIANT := caf-msm8996
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true

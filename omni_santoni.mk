@@ -19,9 +19,13 @@ TARGET_BOOT_ANIMATION_RES := 720
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
+TARGET_BOOTANIMATION_SIZE := 720p
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
+# Get the prebuilt list of APNs
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
+# Inherit some common Omni stuff
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from santoni device
 $(call inherit-product, device/xiaomi/santoni/device.mk)
@@ -30,7 +34,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4X
 PRODUCT_DEVICE := santoni
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := pixys_santoni
+PRODUCT_NAME := omni_santoni
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
